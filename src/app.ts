@@ -1,5 +1,5 @@
 import express from 'express';
-import Router from './routers/Router.ts';
+import PropertyRouter from './routers/PropertyRouter.ts';
 
 const PORT = process.env.PORT || 3000;
 
@@ -9,6 +9,6 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
-app.use('/', Router);
+app.use('/', PropertyRouter);
 
 export default app;
