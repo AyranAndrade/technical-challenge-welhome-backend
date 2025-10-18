@@ -1,0 +1,35 @@
+{
+  "name": "technical-challenge-welhome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "node --experimental-strip-types --experimental-transform-types --watch src/app.ts",
+    "start": "npx tsx src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AyranAndrade/technical-challenge-welhome.git"
+  },
+  "author": "Ayran Andrade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AyranAndrade/technical-challenge-welhome/issues"
+  },
+  "homepage": "https://github.com/AyranAndrade/technical-challenge-welhome#readme",
+  "dependencies": {
+    "@types/express": "^5.0.3",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.8.1",
+    "tsx": "^4.20.6"
+  }
+}
