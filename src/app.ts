@@ -1,25 +1,14 @@
 import express from 'express';
-import type { Request, Response } from 'express';
+import Router from './routers/Router.ts';
 
-class TypescriptService {
-  testVariable: string;
-
-  constructor() {
-    this.testVariable = "I'm definitely a string, since my birth";
-  }
-
-  getTestVariable() {
-    return this.testVariable;
-  }
-}
+const PORT = process.env.PORT || 3000;
 
 const app = express();
-const typescriptService = new TypescriptService();
 
-app.get("/", async (req: Request, res: Response) => {
-  res.send(typescriptService.getTestVariable());
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
-app.listen(3001, () => {
-  console.log("Server is running on port 3001");
-});
+app.use('/', Router);
+
+export default app;
