@@ -9,6 +9,9 @@ const propertyRepository = {
             where: { id }
         });        
     },
+    async findAll() {
+        return await Property.findAll();
+    },
 };
 
 export default propertyRepository;
