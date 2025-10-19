@@ -1,14 +1,36 @@
-import type { PropertyStatus } from "./PropertyStatus.ts";
+import { DataTypes, Model, type CreationOptional, type InferAttributes, type InferCreationAttributes } from 'sequelize';
+import { sequelize } from '../repositories/Database.ts';
+import { PropertyStatus } from './PropertyStatus.ts';
 
-export default class Property {
-    private id?: number;
-    private title: string;
-    private address: string;
-    private status: PropertyStatus;
-
-    constructor(title: string, address: string, status: PropertyStatus) {
-        this.title = title;
-        this.address = address;
-        this.status = status;
-    }
+export class Property extends Model<InferAttributes<Property>, InferCreationAttributes<Property>> {
+  declare id: CreationOptional<number>;
+  declare title: string;
+  declare address: string;
+  declare status: PropertyStatus;
 }
+
+Property.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    status: {
+      type: DataTypes.ENUM(...Object.values(PropertyStatus) as string[]),
+      allowNull: false
+    }
+  },
+  {
+    tableName: 'properties',
+    sequelize
+  }
+);
