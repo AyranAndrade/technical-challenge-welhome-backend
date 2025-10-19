@@ -1,0 +1,40 @@
+{
+	"info": {
+		"_postman_id": "5c1b6e1c-c858-41e3-b118-bd5be7c223c1",
+		"name": "Welhome",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49379569",
+		"_collection_link": "https://todoladraoehburro-1441194.postman.co/workspace/todoladraoehburro's-Workspace~d32e159b-73de-4cb5-8233-de90520572dc/collection/49379569-5c1b6e1c-c858-41e3-b118-bd5be7c223c1?action=share&source=collection_link&creator=49379569"
+	},
+	"item": [
+		{
+			"name": "Create a property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Imóvel\",\n    \"address\": \"Avenida Paulista\",\n    \"status\": \"ACTIVE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/properties/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"properties",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
