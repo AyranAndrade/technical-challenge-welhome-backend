@@ -12,6 +12,11 @@ const propertyRepository = {
     async findAll() {
         return await Property.findAll();
     },
+    async update(id: number, data: any) {
+        return await Property.update(data, { 
+            where : { id }
+        });
+    },
 };
 
 export default propertyRepository;
