@@ -1,4 +1,3 @@
-import { Property } from "../../../../models/Property.ts";
 import propertyRepository from "../../../../repositories/PropertyRepository.ts";
 
 const propertyCreatorService = {
