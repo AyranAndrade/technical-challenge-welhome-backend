@@ -5,7 +5,7 @@ const propertyGetterController = {
     async getAll(req: Request, res: Response) {
         const properties = await propertyGetterService.getAll();
 
-        res.status(201).send(properties);
+        res.status(200).send(properties);
     },
 };
 
